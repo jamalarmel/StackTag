@@ -14,6 +14,7 @@ class StackCrawlerSpider(CrawlSpider):
     rules = (
         #Rule(LinkExtractor(allow=r'questions\?page=[0-9]&sort=votes'),callback='parse_item', follow=True),
         Rule(LinkExtractor(allow=r'questions/tagged/python\?page=[0-9]&sort=votes'),callback='parse_item', follow=True),
+        #Rule(LinkExtractor(allow=r'questions/tagged/python\?page=[0-9]&sort=votes'),callback='parse_item', follow=False)
     )
 
     def parse_item(self, response):
