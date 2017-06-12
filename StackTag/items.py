@@ -13,5 +13,6 @@ class StacktagItem(scrapy.Item):
     # name = scrapy.Field()
     title = scrapy.Field()
     link = scrapy.Field()
-    qbody = scrapy.Field()
+    url = scrapy.Field()
+    body = scrapy.Field()
     pass
