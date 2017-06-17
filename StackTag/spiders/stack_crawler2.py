@@ -8,14 +8,14 @@ from StackTag.items import StacktagItem
 class StackCrawlerSpider(CrawlSpider):
     name = 'stack_crawler'
     allowed_domains = ['stackoverflow.com']
-    start_urls = ['https://stackoverflow.com/questions/tagged/python?page=1&sort=votes&pagesize=30']
+    start_urls = ['https://stackoverflow.com/questions/tagged/java?page=1&sort=votes&pagesize=30']
 
-    # rules = (
-    #     Rule(LinkExtractor(allow=r'questions/tagged/python\?page=0?[1-9]|[1-9][0-9]&sort=votes'),callback='parse_item', follow=True),
-    # )
     rules = (
-        Rule(LinkExtractor(allow=r'questions/tagged/python\?page=[0-9]&sort=votes'),callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'questions/tagged/java\?page=0?[1-9]|[1-9][0-9]&sort=votes'),callback='parse_item', follow=True),
     )
+    # rules = (
+    #     Rule(LinkExtractor(allow=r'questions/tagged/python\?page=[0-9]&sort=votes'),callback='parse_item', follow=True),
+    # )
    
     BASE_URL = 'https://stackoverflow.com/'
 
